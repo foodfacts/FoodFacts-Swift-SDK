@@ -1,9 +1,9 @@
 use_frameworks!
 
 target 'FoodFactsSDK_Example' do
-    pod 'FoodFactsSDK', :path => '../'
-    pod 'SwiftyJSON'
-    pod 'Alamofire', '~> 4.3'
+ pod 'SwiftyJSON'
+ pod 'Alamofire'
+  pod 'FoodFactsSDK', :path => '../'
 
   target 'FoodFactsSDK_Tests' do
     inherit! :search_paths

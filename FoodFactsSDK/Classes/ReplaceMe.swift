@@ -1,6 +1,7 @@
+
 import Foundation
 
-
-class test{
+class Produt {
     
+    let inb : Int = 10
 }
