@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # FoodFactsSDK
 
 [![CI Status](http://img.shields.io/travis/mackensiealvarez/FoodFactsSDK.svg?style=flat)](https://travis-ci.org/mackensiealvarez/FoodFactsSDK)
@@ -27,3 +28,6 @@ mackensiealvarez, mackensiealvarez@gmail.com
 ## License
 
 FoodFactsSDK is available under the MIT license. See the LICENSE file for more info.
+=======
+# FoodFacts-Swift-SDK
+>>>>>>> 9eb9a2362ec950e9a85e92ccfb929e4fa98b4e95
