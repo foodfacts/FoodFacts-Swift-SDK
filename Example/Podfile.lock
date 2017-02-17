@@ -1,0 +1,16 @@
+PODS:
+  - FoodFactsSDK (0.1.0)
+
+DEPENDENCIES:
+  - FoodFactsSDK (from `../`)
+
+EXTERNAL SOURCES:
+  FoodFactsSDK:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  FoodFactsSDK: 4357c59dd7f79ef10669e6bee0f70a9fe5aa9b9c
+
+PODFILE CHECKSUM: 007aa9568b2be94f343624e38185b640b83ffe4c
+
+COCOAPODS: 1.1.1
