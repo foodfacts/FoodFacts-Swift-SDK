@@ -15,17 +15,41 @@ class FoodFacts {
    private var password: String = ""
    private var baseURL : String = "https://api.foodfacts.com/ci/api/foodfacts/"
     
-     /*
-        -This is used to config and save the users username and password.
-        - Function belongs in the app delagate
-        - Username is the username for the api
-        - Password is the password for that api account.
+    /**
+     Configs username and password for all api calls.
+     
+     - parameter username: Username for API account.
+     
+     - parameter password: Password for API account.
+     
      */
     func configuration(username: String, password: String){
         
         self.username = username
         self.password = password
     }
+    
+    /**
+     Food Categories List
+     
+     */
+    func foodCategories(callback: @escaping (FFCategoryResponse)->()){
+        Alamofire.request(baseURL+"food_categories", method: .post, parameters: ["login": username, "password" : password]).responseJSON {response in
+            if let j = response.result.value{
+                //Check if vaild
+                let json = JSON(j)
+                if json["code"].intValue == 1001 {
+                    //Error
+                    print(json["message"].stringValue)
+                } else {
+                    //Success - response
+                    let response = FFCategoryResponse(json: json)
+                    callback(response)
+                }
+            }
+        }
+    }
+    
     
     
 }
