@@ -11,7 +11,8 @@
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
 ## Requirements
-
+Swift3
+FoodFacts API account
 ## Installation
 
 FoodFactsSDK is available through [CocoaPods](http://cocoapods.org). To install
@@ -23,7 +24,7 @@ pod "FoodFactsSDK"
 
 ## Author
 
-mackensiealvarez, mackensiealvarez@gmail.com
+FoodFacts , mackensie@foodfacts.com
 
 ## License
 

@@ -14,6 +14,7 @@
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		A08D45A71A5263DB06E95964 /* Pods_FoodFactsSDK_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48480225B8F4716D89DC41BB /* Pods_FoodFactsSDK_Tests.framework */; };
+		D6FF142B1E56CC24001DB34A /* FoodFactsSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6FF142A1E56CC24001DB34A /* FoodFactsSDK.framework */; };
 		DB4E1577BBC82F3872884EA2 /* Pods_FoodFactsSDK_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B512878913D736B48DF6BEEC /* Pods_FoodFactsSDK_Example.framework */; };
 /* End PBXBuildFile section */
 
@@ -46,6 +47,7 @@
 		745CA8EAAE25C7042F0D3E2B /* Pods-FoodFactsSDK_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodFactsSDK_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FoodFactsSDK_Tests/Pods-FoodFactsSDK_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		8B4BEA814ECA5B674F7575E7 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		B512878913D736B48DF6BEEC /* Pods_FoodFactsSDK_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FoodFactsSDK_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D6FF142A1E56CC24001DB34A /* FoodFactsSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FoodFactsSDK.framework; path = "../../../../../../Library/Developer/Xcode/DerivedData/FoodFactsSDK-chpzjjnisplsyaflsnjcvfgobpyy/Build/Products/Debug-iphonesimulator/FoodFactsSDK/FoodFactsSDK.framework"; sourceTree = "<group>"; };
 		EFF089C79BA8F06907006E6C /* FoodFactsSDK.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = FoodFactsSDK.podspec; path = ../FoodFactsSDK.podspec; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -54,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6FF142B1E56CC24001DB34A /* FoodFactsSDK.framework in Frameworks */,
 				DB4E1577BBC82F3872884EA2 /* Pods_FoodFactsSDK_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -72,6 +75,7 @@
 		4DD6360F0DB4DAA3BB462F3E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D6FF142A1E56CC24001DB34A /* FoodFactsSDK.framework */,
 				B512878913D736B48DF6BEEC /* Pods_FoodFactsSDK_Example.framework */,
 				48480225B8F4716D89DC41BB /* Pods_FoodFactsSDK_Tests.framework */,
 			);

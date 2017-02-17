@@ -1,16 +1,24 @@
 PODS:
-  - FoodFactsSDK (0.1.0)
+  - Alamofire (4.3.0)
+  - FoodFactsSDK (0.1.1):
+    - Alamofire
+    - SwiftyJSON
+  - SwiftyJSON (3.1.4)
 
 DEPENDENCIES:
+  - Alamofire
   - FoodFactsSDK (from `../`)
+  - SwiftyJSON
 
 EXTERNAL SOURCES:
   FoodFactsSDK:
     :path: "../"
 
 SPEC CHECKSUMS:
-  FoodFactsSDK: 4357c59dd7f79ef10669e6bee0f70a9fe5aa9b9c
+  Alamofire: 856a113053a7bc9cbe5d6367a555d773fc5cfef7
+  FoodFactsSDK: de24b00d532217116f05dbc13ea6676ee37f1d56
+  SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
 
-PODFILE CHECKSUM: 007aa9568b2be94f343624e38185b640b83ffe4c
+PODFILE CHECKSUM: 5f092e52abe26d2baecf3cf86e00461d72a4fa5a
 
 COCOAPODS: 1.1.1
