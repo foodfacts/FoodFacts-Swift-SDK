@@ -24,21 +24,25 @@ pod "FoodFactsSDK"
 
 #### Initialization
   In your `AppDelegate` , import `FoodFactsSDK`.
-  ```Swift
+```Swift
   import FoodFactsSDK
-  ```
+```
+
   Next Add Your account credentials.
-  ```Swift
-func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 
-      FoodFacts().configuration(username: "YOUR USERNAME GOES HERE", password: "YOUR PASSWORD GOES HERE")
+```Swift
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 
-      return true
-  }
-    ```
+          FoodFacts().configuration(username: "YOUR USERNAME GOES HERE", password: "YOUR PASSWORD GOES HERE")
+
+          return true
+      }
+```
+
 You're all set and ready to go!
 ## Usage
 #### Food Categories List
+
 Use `FoodFacts().categoryList` to get all Categories.
 
 ```Swift
@@ -98,7 +102,7 @@ Use `FoodFacts().productsBySearchTerm(search_term: String, per_page: Int, page: 
   - pd_score (Score Ascending)
   - pd_score:desc (Score Descending)
 
-  ```Swift
+```Swift
   FoodFacts().productsBySearchTerm(search_term: "apples", per_page: 4, page: 1, sort_by: "peg_name.sort", callback: {response in
 
              for products in response.results.products{
@@ -106,7 +110,7 @@ Use `FoodFacts().productsBySearchTerm(search_term: String, per_page: Int, page: 
              }
          })
 
-  ```
+```
 
 #### Getting Product Information By Product ID
 Use `FoodFacts().productInformationByID(product_id: String)` to get a product information.
