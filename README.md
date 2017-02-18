@@ -8,8 +8,8 @@
 FoodFactsSDK Helps you get started with our amazing API in seconds.
 
 ## Requirements
-- Swift 3
-- Xcode 8
+- Swift 2
+- Xcode 7
 - FoodFacts API account ([Sign up](https://api.foodfacts.com/#plans))
 
 ## Installation
