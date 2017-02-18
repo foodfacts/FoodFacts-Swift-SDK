@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
 s.name             = 'FoodFactsSDK'
-s.version          = '0.2.3'
+s.version          = '0.2.4'
 s.summary          = 'FoodFacts Swift SDK For IOS'
 
 # This description is used to generate tags and improve search results.
@@ -39,6 +39,6 @@ s.source_files = 'FoodFactsSDK/Classes/**/*'
 
 # s.public_header_files = 'Pod/Classes/**/*.h'
 # s.frameworks = 'UIKit', 'Alamofire','SwiftyJSON'
-s.dependency 'Alamofire', '~> 3.5'
-s.dependency 'SwiftyJSON' , '2.4.0'
+s.dependency 'Alamofire'
+s.dependency 'SwiftyJSON'
 end
