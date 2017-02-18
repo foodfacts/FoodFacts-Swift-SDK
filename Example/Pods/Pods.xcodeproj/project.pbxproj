@@ -10,7 +10,7 @@
 		06E945599557D8FF44E3C3F48E860FF4 /* Pods-FoodFactsSDK_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7958A1EB67C08C4F18C1E461CBFDE861 /* Pods-FoodFactsSDK_Example-dummy.m */; };
 		10EB23E9ECC4B33E16933BB1EA560B6A /* Timeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D182500FF4918391F97385DAE996449 /* Timeline.swift */; };
 		1B9EDEDC964E6B08F78920B4F4B9DB84 /* Alamofire-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 94276CF887593FC21A638F4E2F1F4A42 /* Alamofire-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		23D0A5F5BF6842F12C32BA18ECAB12DE /* FFCategoryResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D17FE8EB9E4A824686E2A2DA70CE996 /* FFCategoryResponse.swift */; };
+		23D0A5F5BF6842F12C32BA18ECAB12DE /* FFCategoryListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D17FE8EB9E4A824686E2A2DA70CE996 /* FFCategoryListResponse.swift */; };
 		26B94B55151779F387EBADD5219E3112 /* Pods-FoodFactsSDK_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E32DA4D1AE9B4FA5ECB0674A5C70180 /* Pods-FoodFactsSDK_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		31FCEEC428F28CF99A00CBA91714DDA3 /* FoodFactsSDK-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C192D03D761929DF4ADE2FA20278BC76 /* FoodFactsSDK-dummy.m */; };
 		3626B94094672CB1C9DEA32B9F9502E1 /* TaskDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003F0620667B1D1CE3A63A07911DA946 /* TaskDelegate.swift */; };
@@ -39,6 +39,17 @@
 		BDB63CFC5879D1727564837C3C64A880 /* Pods-FoodFactsSDK_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EED7926F2AC5351DA96768E70341AD63 /* Pods-FoodFactsSDK_Tests-dummy.m */; };
 		BE5C67A07E289FE1F9BE27335B159997 /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F03809326666A0674F21BBADB1BB09D /* ParameterEncoding.swift */; };
 		CB6D60925223897FFA2662667DF83E8A /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6E04C2B770D33E90A7E43AD9A6DDF5 /* Response.swift */; };
+		D658D6241E57C94A00C27305 /* FFProductsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D658D6221E57C93E00C27305 /* FFProductsResponse.swift */; };
+		D658D6271E57C9DA00C27305 /* FFProductsResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = D658D6251E57C9AD00C27305 /* FFProductsResults.swift */; };
+		D658D62A1E57CA8F00C27305 /* FFProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = D658D6281E57CA8700C27305 /* FFProduct.swift */; };
+		D658D62D1E57CDE900C27305 /* FFProductIngredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D658D62B1E57CDE500C27305 /* FFProductIngredient.swift */; };
+		D658D6301E58BCB900C27305 /* FFProductResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D658D62E1E58BCB500C27305 /* FFProductResponse.swift */; };
+		D658D6331E58BF5200C27305 /* FFProductResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = D658D6311E58BF4700C27305 /* FFProductResults.swift */; };
+		D658D6361E58BFB000C27305 /* FFProductDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = D658D6341E58BFAD00C27305 /* FFProductDetail.swift */; };
+		D658D6391E58C16000C27305 /* FFProductNutrition.swift in Sources */ = {isa = PBXBuildFile; fileRef = D658D6371E58C15E00C27305 /* FFProductNutrition.swift */; };
+		D658D63C1E58C24D00C27305 /* FFProductVitamin.swift in Sources */ = {isa = PBXBuildFile; fileRef = D658D63A1E58C24A00C27305 /* FFProductVitamin.swift */; };
+		D658D63F1E58C36900C27305 /* FFProductAllergen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D658D63D1E58C35900C27305 /* FFProductAllergen.swift */; };
+		D658D6421E58C49100C27305 /* FFProductReportCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = D658D6401E58C48500C27305 /* FFProductReportCard.swift */; };
 		E0D1CFBE8DA8B8847BE60491A36478D0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDE9092F7D4F532336D230D67FA4415F /* Foundation.framework */; };
 		EFAB8EF41CAC3578EF7D02E51773722C /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32059BC369D7FCF1B2F950DF30BE51C3 /* SwiftyJSON.framework */; };
 		EFD264FC408EBF3BA2528E70B08DDD94 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09922B86810418CDE6DD69710D5A9C17 /* Notifications.swift */; };
@@ -91,41 +102,41 @@
 		052E0AFBE10C7D03B28A1214E5C26A27 /* Pods-FoodFactsSDK_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-FoodFactsSDK_Example-resources.sh"; sourceTree = "<group>"; };
 		09922B86810418CDE6DD69710D5A9C17 /* Notifications.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Notifications.swift; path = Source/Notifications.swift; sourceTree = "<group>"; };
 		0C6E04C2B770D33E90A7E43AD9A6DDF5 /* Response.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Response.swift; path = Source/Response.swift; sourceTree = "<group>"; };
-		100BE134577419E43F67C4159D81DFB9 /* FoodFactsSDK.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = FoodFactsSDK.modulemap; sourceTree = "<group>"; };
+		100BE134577419E43F67C4159D81DFB9 /* FoodFactsSDK.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = FoodFactsSDK.modulemap; sourceTree = "<group>"; };
 		135EE85FA22B5F8455E87B58C5526EEC /* Pods-FoodFactsSDK_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-FoodFactsSDK_Example-frameworks.sh"; sourceTree = "<group>"; };
 		13B1DE36E7BA55E3447E495C97F1D55A /* Pods-FoodFactsSDK_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-FoodFactsSDK_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		1634FA3E2F5577B752A2A95EF63B4B81 /* Alamofire-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Alamofire-dummy.m"; sourceTree = "<group>"; };
 		17C7C311169F3CAF970644274FB0787A /* SwiftyJSON-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftyJSON-dummy.m"; sourceTree = "<group>"; };
-		1B213FD803AA6460E0D164AB4A336DC9 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Alamofire.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1B213FD803AA6460E0D164AB4A336DC9 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C320CF80A9ECC2A5E8394E80256C7B9 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1D374D15BD578F02943F555CEC51DA95 /* FFSubCategory.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FFSubCategory.swift; sourceTree = "<group>"; };
-		24D77669567EFA08F84C2B1801F99AC2 /* Pods-FoodFactsSDK_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-FoodFactsSDK_Tests.modulemap"; sourceTree = "<group>"; };
+		24D77669567EFA08F84C2B1801F99AC2 /* Pods-FoodFactsSDK_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-FoodFactsSDK_Tests.modulemap"; sourceTree = "<group>"; };
 		26EFF0A773A9B68F8036680922E55A8F /* ResponseSerialization.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ResponseSerialization.swift; path = Source/ResponseSerialization.swift; sourceTree = "<group>"; };
 		2D182500FF4918391F97385DAE996449 /* Timeline.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Timeline.swift; path = Source/Timeline.swift; sourceTree = "<group>"; };
 		2EF3D161B4D3BA0DFB23119504A4863B /* Alamofire-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-prefix.pch"; sourceTree = "<group>"; };
 		32059BC369D7FCF1B2F950DF30BE51C3 /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		332F6B9EA5D63A221428D82DFC754F83 /* SessionDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionDelegate.swift; path = Source/SessionDelegate.swift; sourceTree = "<group>"; };
 		37B39FBFA54975D6C7FC83EB102861B9 /* FoodFacts.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FoodFacts.swift; sourceTree = "<group>"; };
-		3D17FE8EB9E4A824686E2A2DA70CE996 /* FFCategoryResponse.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FFCategoryResponse.swift; sourceTree = "<group>"; };
+		3D17FE8EB9E4A824686E2A2DA70CE996 /* FFCategoryListResponse.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FFCategoryListResponse.swift; sourceTree = "<group>"; };
 		3E32DA4D1AE9B4FA5ECB0674A5C70180 /* Pods-FoodFactsSDK_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-FoodFactsSDK_Tests-umbrella.h"; sourceTree = "<group>"; };
-		4463AAE90DA6DD63699B1893069302E7 /* Pods-FoodFactsSDK_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-FoodFactsSDK_Example.modulemap"; sourceTree = "<group>"; };
-		4518614AF7827B75EA37ACFB3CB60FA2 /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftyJSON.framework; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4463AAE90DA6DD63699B1893069302E7 /* Pods-FoodFactsSDK_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-FoodFactsSDK_Example.modulemap"; sourceTree = "<group>"; };
+		4518614AF7827B75EA37ACFB3CB60FA2 /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B4389FFBA9A4890379E2A73EE21BE8B /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5933A0580629CB79BDBD1D33483297F5 /* DispatchQueue+Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DispatchQueue+Alamofire.swift"; path = "Source/DispatchQueue+Alamofire.swift"; sourceTree = "<group>"; };
 		638A33FDD639A9F552427FB34262A161 /* Pods-FoodFactsSDK_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-FoodFactsSDK_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		67498603FB2AB18A21404A71F4017847 /* Pods_FoodFactsSDK_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_FoodFactsSDK_Tests.framework; path = "Pods-FoodFactsSDK_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		6EF89235C4D8055A9644AE376D08390F /* Pods_FoodFactsSDK_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_FoodFactsSDK_Example.framework; path = "Pods-FoodFactsSDK_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		67498603FB2AB18A21404A71F4017847 /* Pods_FoodFactsSDK_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FoodFactsSDK_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6EF89235C4D8055A9644AE376D08390F /* Pods_FoodFactsSDK_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FoodFactsSDK_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7857033CB003F852F367D6BC6CA97425 /* NetworkReachabilityManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NetworkReachabilityManager.swift; path = Source/NetworkReachabilityManager.swift; sourceTree = "<group>"; };
 		7958A1EB67C08C4F18C1E461CBFDE861 /* Pods-FoodFactsSDK_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-FoodFactsSDK_Example-dummy.m"; sourceTree = "<group>"; };
-		7BD1D581B483AF8736F68B34656AEA1F /* SwiftyJSON.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = SwiftyJSON.modulemap; sourceTree = "<group>"; };
+		7BD1D581B483AF8736F68B34656AEA1F /* SwiftyJSON.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = SwiftyJSON.modulemap; sourceTree = "<group>"; };
 		8F03809326666A0674F21BBADB1BB09D /* ParameterEncoding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ParameterEncoding.swift; path = Source/ParameterEncoding.swift; sourceTree = "<group>"; };
 		927159AC28B562B9F78B38834A07F0DA /* Alamofire.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Alamofire.xcconfig; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		94276CF887593FC21A638F4E2F1F4A42 /* Alamofire-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-umbrella.h"; sourceTree = "<group>"; };
 		944E63CF21085FD64B2D487DCB0D42BC /* Pods-FoodFactsSDK_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-FoodFactsSDK_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		9E569F27928CEC6818FF21684F8D0575 /* Pods-FoodFactsSDK_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-FoodFactsSDK_Tests-resources.sh"; sourceTree = "<group>"; };
 		A22FAAFFF47D228853D416916A79ABBC /* Pods-FoodFactsSDK_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FoodFactsSDK_Example.release.xcconfig"; sourceTree = "<group>"; };
-		AB1C5BB634D7D0AB5D5CD362109A0AAA /* FoodFactsSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = FoodFactsSDK.framework; path = FoodFactsSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB1C5BB634D7D0AB5D5CD362109A0AAA /* FoodFactsSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FoodFactsSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEBEB670658597FB7864005ED913ECB6 /* Request.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Request.swift; path = Source/Request.swift; sourceTree = "<group>"; };
 		AF748B9E1848C5D6DD73C0C1A7A36AE2 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BA5B8F6AE942BA3D7E8C0B8732349B67 /* SwiftyJSON-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyJSON-umbrella.h"; sourceTree = "<group>"; };
@@ -137,6 +148,17 @@
 		CF6FA20699EAC0AB72A507BB66B191F8 /* AFError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AFError.swift; path = Source/AFError.swift; sourceTree = "<group>"; };
 		CFBFF681209D4E5030FF4116EFD41362 /* SwiftyJSON.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftyJSON.swift; path = Source/SwiftyJSON.swift; sourceTree = "<group>"; };
 		D0878CFC030EFFCD71A3F8A365719EDF /* Pods-FoodFactsSDK_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FoodFactsSDK_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		D658D6221E57C93E00C27305 /* FFProductsResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FFProductsResponse.swift; sourceTree = "<group>"; };
+		D658D6251E57C9AD00C27305 /* FFProductsResults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FFProductsResults.swift; sourceTree = "<group>"; };
+		D658D6281E57CA8700C27305 /* FFProduct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FFProduct.swift; sourceTree = "<group>"; };
+		D658D62B1E57CDE500C27305 /* FFProductIngredient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FFProductIngredient.swift; sourceTree = "<group>"; };
+		D658D62E1E58BCB500C27305 /* FFProductResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FFProductResponse.swift; sourceTree = "<group>"; };
+		D658D6311E58BF4700C27305 /* FFProductResults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FFProductResults.swift; sourceTree = "<group>"; };
+		D658D6341E58BFAD00C27305 /* FFProductDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FFProductDetail.swift; sourceTree = "<group>"; };
+		D658D6371E58C15E00C27305 /* FFProductNutrition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FFProductNutrition.swift; sourceTree = "<group>"; };
+		D658D63A1E58C24A00C27305 /* FFProductVitamin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FFProductVitamin.swift; sourceTree = "<group>"; };
+		D658D63D1E58C35900C27305 /* FFProductAllergen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FFProductAllergen.swift; sourceTree = "<group>"; };
+		D658D6401E58C48500C27305 /* FFProductReportCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FFProductReportCard.swift; sourceTree = "<group>"; };
 		D9EE6D52AA2F0C3238B527C58255F520 /* ServerTrustPolicy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ServerTrustPolicy.swift; path = Source/ServerTrustPolicy.swift; sourceTree = "<group>"; };
 		DAA5CA9C1A1A8A10FA0F34E068E281AB /* Result.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Result.swift; path = Source/Result.swift; sourceTree = "<group>"; };
 		DE99AF16AC7077B672DAE5DAD765B367 /* SwiftyJSON.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftyJSON.xcconfig; sourceTree = "<group>"; };
@@ -145,7 +167,7 @@
 		E4DBD76A21C09EF46D559152762DC61B /* Pods-FoodFactsSDK_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-FoodFactsSDK_Example-umbrella.h"; sourceTree = "<group>"; };
 		E8202EA65D7F9777D78833FBE8F42BF1 /* SwiftyJSON-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyJSON-prefix.pch"; sourceTree = "<group>"; };
 		EED7926F2AC5351DA96768E70341AD63 /* Pods-FoodFactsSDK_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-FoodFactsSDK_Tests-dummy.m"; sourceTree = "<group>"; };
-		EEF1DD17D00D8B108483FE2FEE2ED4DA /* Alamofire.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = Alamofire.modulemap; sourceTree = "<group>"; };
+		EEF1DD17D00D8B108483FE2FEE2ED4DA /* Alamofire.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Alamofire.modulemap; sourceTree = "<group>"; };
 		F05B506A540FE042146EA8265DD35585 /* SessionManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionManager.swift; path = Source/SessionManager.swift; sourceTree = "<group>"; };
 		F26FB4343C43368E1D119B6871123AF1 /* Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Alamofire.swift; path = Source/Alamofire.swift; sourceTree = "<group>"; };
 		F382C5721F36A8CF08DA36032E8FF2C1 /* Validation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Validation.swift; path = Source/Validation.swift; sourceTree = "<group>"; };
@@ -244,7 +266,6 @@
 			children = (
 				24064D45281047B87EC76E3D54010AB2 /* Classes */,
 			);
-			name = FoodFactsSDK;
 			path = FoodFactsSDK;
 			sourceTree = "<group>";
 		};
@@ -252,11 +273,21 @@
 			isa = PBXGroup;
 			children = (
 				DFABAD7CD8298860396EA1D6445940A1 /* FFCategory.swift */,
-				3D17FE8EB9E4A824686E2A2DA70CE996 /* FFCategoryResponse.swift */,
+				3D17FE8EB9E4A824686E2A2DA70CE996 /* FFCategoryListResponse.swift */,
 				1D374D15BD578F02943F555CEC51DA95 /* FFSubCategory.swift */,
+				D658D6221E57C93E00C27305 /* FFProductsResponse.swift */,
+				D658D6311E58BF4700C27305 /* FFProductResults.swift */,
+				D658D6401E58C48500C27305 /* FFProductReportCard.swift */,
+				D658D6371E58C15E00C27305 /* FFProductNutrition.swift */,
+				D658D63D1E58C35900C27305 /* FFProductAllergen.swift */,
+				D658D63A1E58C24A00C27305 /* FFProductVitamin.swift */,
+				D658D6341E58BFAD00C27305 /* FFProductDetail.swift */,
+				D658D62E1E58BCB500C27305 /* FFProductResponse.swift */,
+				D658D62B1E57CDE500C27305 /* FFProductIngredient.swift */,
+				D658D6281E57CA8700C27305 /* FFProduct.swift */,
+				D658D6251E57C9AD00C27305 /* FFProductsResults.swift */,
 				37B39FBFA54975D6C7FC83EB102861B9 /* FoodFacts.swift */,
 			);
-			name = Classes;
 			path = Classes;
 			sourceTree = "<group>";
 		};
@@ -363,7 +394,6 @@
 				CFBFF681209D4E5030FF4116EFD41362 /* SwiftyJSON.swift */,
 				F847E694BA44D7153C3E16A02FE345D4 /* Support Files */,
 			);
-			name = SwiftyJSON;
 			path = SwiftyJSON;
 			sourceTree = "<group>";
 		};
@@ -399,7 +429,6 @@
 				F382C5721F36A8CF08DA36032E8FF2C1 /* Validation.swift */,
 				75817F13FD582AA366F3A28BAEAFD135 /* Support Files */,
 			);
-			name = Alamofire;
 			path = Alamofire;
 			sourceTree = "<group>";
 		};
@@ -639,10 +668,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				583D8FFAD56AF23A0E8AA5A571D3C6BA /* FFCategory.swift in Sources */,
-				23D0A5F5BF6842F12C32BA18ECAB12DE /* FFCategoryResponse.swift in Sources */,
+				23D0A5F5BF6842F12C32BA18ECAB12DE /* FFCategoryListResponse.swift in Sources */,
+				D658D63C1E58C24D00C27305 /* FFProductVitamin.swift in Sources */,
+				D658D62D1E57CDE900C27305 /* FFProductIngredient.swift in Sources */,
+				D658D6271E57C9DA00C27305 /* FFProductsResults.swift in Sources */,
 				F985758A94D816141D997DF8C7AF3F02 /* FFSubCategory.swift in Sources */,
+				D658D6301E58BCB900C27305 /* FFProductResponse.swift in Sources */,
+				D658D6421E58C49100C27305 /* FFProductReportCard.swift in Sources */,
+				D658D6331E58BF5200C27305 /* FFProductResults.swift in Sources */,
 				84C3836C47EE78E929FED4D062FEE61C /* FoodFacts.swift in Sources */,
+				D658D6361E58BFB000C27305 /* FFProductDetail.swift in Sources */,
+				D658D6241E57C94A00C27305 /* FFProductsResponse.swift in Sources */,
 				31FCEEC428F28CF99A00CBA91714DDA3 /* FoodFactsSDK-dummy.m in Sources */,
+				D658D6391E58C16000C27305 /* FFProductNutrition.swift in Sources */,
+				D658D63F1E58C36900C27305 /* FFProductAllergen.swift in Sources */,
+				D658D62A1E57CA8F00C27305 /* FFProduct.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

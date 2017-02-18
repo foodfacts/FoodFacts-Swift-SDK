@@ -9,18 +9,20 @@
 import Foundation
 import SwiftyJSON
 
-class FFCategoryResponse {
+public class FFCategoryListResponse {
     
-     var code: Int
-     var userId: String
-     var apiRemaining: Int
-    var categoies : [FFCategory]
+   public  var code: Int
+   public var userId: String
+   public var apiRemaining: Int
+   public var categoies : [FFCategory]
     
     init(json: JSON) {
         self.code = json["code"].intValue
         self.userId = json["userId"].stringValue
         self.apiRemaining = json["apiRemaining"].intValue
         self.categoies = json["results"].arrayValue.map({ j in return FFCategory(json: j) })
+        
+
 
     }
     

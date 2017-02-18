@@ -11,11 +11,19 @@ import FoodFactsSDK
 class ViewController: UIViewController {
 
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-    
         
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        //One line of code to show products
+        FoodFacts().productsBySearchTerm(search_term: "apples", per_page: 10, page: 1, sort_by: "peg_name.sort", callback: {response in
+            for product in response.results.products{
+                print(product.title) //Product name
+            }
+        })
+        
+        
     }
 
     override func didReceiveMemoryWarning() {

@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import FoodFactsSDK
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -16,6 +16,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        FoodFacts().configuration(username: "YOUR USERNAME GOES HERE", password: "YOUR PASSWORD GOES HERE")
+        print("config done")
+        
         return true
     }
 
