@@ -11,9 +11,13 @@ import SwiftyJSON
 
 public class FFProductIngredient {
     
+    /// Allergens for this ingredient
     public var allergens: String
+    /// Ingredient ID
     public var ingredient_id: Int
+    /// Ingredient name
     public var name: String
+    /// Order of all ingredient
     public var order: Int
     
     init(json : JSON) {

@@ -10,11 +10,17 @@ import Foundation
 import SwiftyJSON
 
 public class FFCategory {
-    
+    /// This is Category ID
     public var category_id: Int
+    /// This is the name of the Category
     public var name: String
+    /// This is Category ID
     public var parent_category_id: Int
+    /// List of Sub Categories
     public var subCategories: [FFSubCategory]
+    
+    
+    /// Takes the JSON and assigns all values.
     init(json : JSON) {
         self.category_id = json["category_id"].intValue
         self.name = json["name"].stringValue

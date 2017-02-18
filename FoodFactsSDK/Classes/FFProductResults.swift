@@ -10,11 +10,18 @@ import Foundation
 import SwiftyJSON
 public class FFProductResults{
     
+    
+    /// This returns the Product Details
     public var productDetail: FFProductDetail
+    /// This returns the Product Nutrition
     public var productNutrition: [FFProductNutrition]
+    /// This returns Product Vitamin
     public var productVitamins: [FFProductVitamin]
+    /// This returns Product Ingredients
     public var productIngredients: [FFProductIngredient]
+    /// This returns Product Allergens
     public var productAllergens: [FFProductAllergen]
+    /// This returns Product Report card
     public var productReportCard: [FFProductReportCard]
     
     init(json : JSON) {

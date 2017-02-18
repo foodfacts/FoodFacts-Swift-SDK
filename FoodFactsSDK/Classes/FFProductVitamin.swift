@@ -11,8 +11,11 @@ import SwiftyJSON
 
 public class FFProductVitamin{
     
+    /// This is the amount for the Vitamin
     public var amount: Int
+    /// This is the name of the Vitamin
     public var name: String
+    /// This is the percentage for the Vitamin
     public var percent: Int
     
     init(json: JSON) {

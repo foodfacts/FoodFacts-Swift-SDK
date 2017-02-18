@@ -10,10 +10,12 @@ import Foundation
 import SwiftyJSON
 
 public class FFProductReportCard{
-    
+    /// This returns a good or bad value.
     public var good_or_bad: String
     public var heading: String
+    /// This returns a heading for the report card.
     public var text: String
+    /// This returns the type of report card
     public var type: String
     
     init(json: JSON) {

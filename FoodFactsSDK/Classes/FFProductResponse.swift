@@ -11,9 +11,13 @@ import SwiftyJSON
 
 public class FFProductResponse{
     
-    public var code: Int
+    /// The Status of the api call.
+    public  var code: Int
+    /// Your user ID.
     public var userId: String
+    /// How many API Calls you have left.
     public var apiRemaining: Int
+    /// Returns Product Results
     public var results : FFProductResults
     
     init(json: JSON) {

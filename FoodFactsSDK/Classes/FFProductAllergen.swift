@@ -11,7 +11,9 @@ import SwiftyJSON
 
 public class FFProductAllergen{
     
+    /// This is the Allergen ID
     public var allergen_id: Int
+    /// The Allergen name
     public var name: String
    
     

@@ -11,8 +11,11 @@ import SwiftyJSON
 
 public class FFSubCategory {
     
+    /// Sub Category ID.
     public var category_id: Int
+    /// Sub Category name.
     public var name: String
+    /// Parent of the Sub Category.
     public var parent_category_id: Int
    
     init(json : JSON) {

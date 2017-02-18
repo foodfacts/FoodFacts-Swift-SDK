@@ -10,20 +10,34 @@ import Foundation
 import SwiftyJSON
 
 public class FFProduct {
-     public var allergen_list: String
-     public var brand: String
-     public var main_category_name: String
-     public var product_id: String
-     public var product_image: String
-     public var product_upc: String
-     public var sef_url: String
-     public var serving_size: String
-     public var sub_category_name: String
-     public var title: String
-     public var total_weight: String
-     public var food_facts_score: Int
-     public var main_category_id: Int
-     public var sub_category_id: Int
+    /// List of Allergens
+    public var allergen_list: String
+    /// Brand for the product
+    public var brand: String
+    /// Main Category name for the product
+    public var main_category_name: String
+    /// Product ID
+    public var product_id: String
+    /// Image for the product
+    public var product_image: String
+    /// Product UPC CODE
+    public var product_upc: String
+    public var sef_url: String
+    /// Serving size for the product
+    public var serving_size: String
+    /// Sub category name
+    public var sub_category_name: String
+    /// The title/name of the product
+    public var title: String
+    /// Total weight for the product
+    public var total_weight: String
+    /// Our Score for the product
+    public var food_facts_score: Int
+    /// Main category ID
+    public var main_category_id: Int
+    /// Sub Category ID
+    public var sub_category_id: Int
+    /// List of ingredients for this product
      public var ingredients: [FFProductIngredient]
     
     init(json : JSON) {
