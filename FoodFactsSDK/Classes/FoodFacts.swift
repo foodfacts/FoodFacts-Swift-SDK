@@ -53,7 +53,7 @@ public class FoodFacts {
      Food Categories List
      
      */
-   public func categoryList(callback: @escaping (FFCategoryListResponse)->()){
+   public func categoryList(callback:  (FFCategoryListResponse)->()){
    
         let url = baseURL+"food_categories/format/json"
         Alamofire.request(url, method: .post, parameters: ["login": username, "password" : password]).responseJSON {response in
@@ -120,7 +120,7 @@ public class FoodFacts {
      - parameter category_id: The Parent category ID.
      
      */
-    public func subCategoryList(category_id: Int,callback: @escaping (FFCategoryListResponse)->()){
+    public func subCategoryList(category_id: Int,callback:  (FFCategoryListResponse)->()){
         
         let url = baseURL+"food_sub_categories/format/json"
         Alamofire.request(url, method: .post, parameters: ["login": username, "password" : password, "category": category_id]).responseJSON {response in
@@ -181,7 +181,7 @@ public class FoodFacts {
      - parameter sort_by: Sort method
      
      */
-    public func productsByCategory(category_id: Int, subcategory_id: Int, per_page: Int, page: Int, sort_by: String, callback: @escaping (FFProductsResponse)->()){
+    public func productsByCategory(category_id: Int, subcategory_id: Int, per_page: Int, page: Int, sort_by: String, callback:  (FFProductsResponse)->()){
         
         let url = baseURL+"food_products_per_category/format/json"
         Alamofire.request(url, method: .post, parameters: ["login": username, "password" : password, "category": category_id, "sub_category": subcategory_id, "per_page": per_page, "page" : page, "sort_by" : sort_by]).responseJSON {response in
@@ -242,7 +242,7 @@ public class FoodFacts {
      - parameter sort_by: Sort method
      
      */
-    public func productsBySearchTerm(search_term: String, per_page: Int, page: Int, sort_by: String, callback: @escaping (FFProductsResponse)->()){
+    public func productsBySearchTerm(search_term: String, per_page: Int, page: Int, sort_by: String, callback:  (FFProductsResponse)->()){
         
         let url = baseURL+"food_products_per_search_term/format/json"
         Alamofire.request(url, method: .post, parameters: ["login": username, "password" : password, "search_term": search_term, "per_page": per_page, "page" : page, "sort_by" : sort_by]).responseJSON {response in
@@ -300,7 +300,7 @@ public class FoodFacts {
      - parameter product_id: The Product ID
      
      */
-    public func productInformationByID(product_id: String, callback: @escaping (FFProductResponse)->()){
+    public func productInformationByID(product_id: String, callback:  (FFProductResponse)->()){
         
         let url = baseURL+"food_product_detail_information/format/json"
         Alamofire.request(url, method: .post, parameters: ["login": username, "password" : password,  "product_id" : product_id]).responseJSON {response in
@@ -357,7 +357,7 @@ public class FoodFacts {
      - parameter upc: The Product UPC Code
      
      */
-    public func productInformationByUPC(upc: String, callback: @escaping (FFProductResponse)->()){
+    public func productInformationByUPC(upc: String, callback:  (FFProductResponse)->()){
         
         let url = baseURL+"food_find_product_by_upc/format/json"
         Alamofire.request(url, method: .post, parameters: ["login": username, "password" : password,  "upc" : upc]).responseJSON {response in
