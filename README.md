@@ -8,8 +8,8 @@
 FoodFactsSDK Helps you get started with our amazing API in seconds.
 
 ## Requirements
-- Swift 2
-- Xcode 7
+- Swift 2 & Swift 3
+- Xcode 7 & Xcode 8
 - FoodFacts API account ([Sign up](https://api.foodfacts.com/#plans))
 
 ## Installation
@@ -17,10 +17,14 @@ FoodFactsSDK Helps you get started with our amazing API in seconds.
 FoodFactsSDK is available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
+For `Swift 3` use :
 ```ruby
 pod "FoodFactsSDK"
 ```
-
+For `Swift 2` use :
+```ruby
+pod "FoodFactsSDK", "0.2.7"
+```
 
 #### Initialization
   In your `AppDelegate` , import `FoodFactsSDK`.
@@ -129,6 +133,124 @@ FoodFacts().productInformationByUPC(upc: "075720004096", callback: {response in
             print(response.results.productDetail.title)
         })
 ```
+## Classes
+#### FFProduct
+`FFProduct` contains:
+- allergen_list = List of Allergens for that product.
+- brand = Product Brand.
+- main_category_name = Main Category name.
+- product_id = Product ID.
+- product_image = Image URL for the Product.
+- product_upc = Product UPC code.
+- sef_url = URL for the product.
+- serving_size = Serving size.
+- sub_category_name = Sub Category name.
+- title = Name of the product.
+- total_weight = Total weight for the product.
+- food_facts_score = Our score for the product.
+- main_category_id = Main Category ID.
+- sub_category_id = Sub Category ID.
+- ingredients = List of ingredients(`FFProductIngredient`)
+
+#### FFCategory
+`FFCategory` contains:
+- category_id = Category ID.
+- name = Category name.
+- parent_category_id = Parent Category ID.
+- subCategories = List of Sub Categories(`FFSubCategory`)
+
+#### FFSubCategory
+`FFSubCategory` contains:
+- category_id = Sub category ID.
+- name = Sub Category name.
+- parent_category_id = Parent Category ID.
+
+#### FFCategoryListResponse
+`FFCategoryListResponse` contains:
+- code = Status code.
+- userId = Your User ID.
+- apiRemaining = Api Calls Remaining.
+- categoies = List of Categoies(`FFCategory`)
+
+#### FFProductAllergen
+`FFProductAllergen` contains:
+- allergen_id = Allergen ID
+- name = Allergen name.
+
+#### FFProductDetail
+`FFProductDetail` contains:
+- allergen_list = List of Allergens for that product.
+- brand = Product Brand.
+- main_category_name = Main Category name.
+- product_id = Product ID.
+- product_image = Image URL for the Product.
+- product_upc = Product UPC code.
+- sef_url = URL for the product.
+- serving_size = Serving size.
+- sub_category_name = Sub Category name.
+- title = Name of the product.
+- total_weight = Total weight for the product.
+- food_facts_score = Our score for the product.
+- main_category_id = Main Category ID.
+- sub_category_id = Sub Category ID.
+
+#### FFProductIngredient
+`FFProductIngredient` contains:
+- allergens = Allergens attached to this ingredient
+- ingredient_id = Ingredient ID.
+- name = Ingredient name.
+- order = Order of all ingredients.
+
+#### FFProductNutrition
+`FFProductNutrition` contains:
+- unit_abbreviation =  Unit Abbreviation for the Product Nutrition.
+- name = Name of the Nutrition.
+- amount = The amount of the Nutrition.
+
+#### FFProductReportCard
+`FFProductReportCard` contains:
+- good_or_bad = This returns a good or bad value.
+- heading = Report card Heading.
+- text = This returns a text for the report card.
+- type = This returns the type of report card.
+
+#### FFProductResponse
+`FFProductResponse` contains:
+- code = Status code.
+- userId = Your User ID.
+- apiRemaining = Api Calls Remaining.
+- results = `FFProductResults`
+
+#### FFProductResults
+`FFProductResults` contains:
+- productDetail = `FFProductDetail`
+- productNutrition = List of Nutrition(`FFProductDetail`)
+- productVitamins = List of Vitamins(`FFProductVitamin`)
+- productIngredients = List of Vitamins(`FFProductIngredient`)
+- productAllergens = List of Vitamins(`FFProductAllergen`)
+- productReportCard = List of Vitamins(`FFProductReportCard`)
+
+#### FFProductVitamin
+`FFProductVitamin` contains:
+- amount = This is the amount for the Vitamin.
+- name = This is the name of the Vitamin.
+- percent = This is the percentage for the Vitamin.
+
+#### FFProductsResponse
+`FFProductsResponse` contains:
+- code = Status code.
+- userId = Your User ID.
+- apiRemaining = Api Calls Remaining.
+- results = `FFProductsResults`
+
+#### FFProductsResults
+`FFProductsResults` contains:
+- totalResults = Total amount of products found.
+- resultsPerPage = Number of products per page.
+- currentPage = Current page.
+- code = status code.
+- products = List of Products(`FFProduct`)
+
 ## License
 
 FoodFactsSDK is available under the MIT license. See the LICENSE file for more info.

@@ -16,9 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
-        FoodFacts().productInformationByID(product_id: "", callback: {response in
-            print(response.results.productDetail.title)
-        })
+       FoodFacts().configuration(username: "YOUR USERNAME", password: "YOUR PASSWORD")
         return true
     }
 
