@@ -17,7 +17,7 @@ class ViewController: UIViewController {
         
         
         //One line of code to show products
-        FoodFacts().productsByCategory(category_id: 21, subcategory_id: 256, per_page: 4, page: 1, sort_by: "peg_name.sort", callback: {response in
+        FoodFacts().productsByCategory(21, subcategory_id: 256, per_page: 4, page: 1, sort_by: "peg_name.sort", callback: {response in
             
             for products in response.results.products{
                 print(products.title)

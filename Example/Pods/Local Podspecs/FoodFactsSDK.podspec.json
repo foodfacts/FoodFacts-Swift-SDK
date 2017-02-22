@@ -1,6 +1,6 @@
 {
   "name": "FoodFactsSDK",
-  "version": "0.1.1",
+  "version": "0.2.6",
   "summary": "FoodFacts Swift SDK For IOS",
   "description": "FoodFacts Swift SDK For IOS. This is a framework to help you get started with the FoodFacts API. Install libiary to project to easiy get started with a few lines of code.",
   "homepage": "https://github.com/foodfacts/FoodFacts-Swift-SDK",
@@ -9,11 +9,11 @@
     "file": "LICENSE"
   },
   "authors": {
-    "greymattermack": "greymattermack@gmail.com"
+    "FoodFacts": "greymattermack@gmail.com"
   },
   "source": {
     "git": "https://github.com/foodfacts/FoodFacts-Swift-SDK.git",
-    "tag": "0.1.1"
+    "tag": "0.2.6"
   },
   "platforms": {
     "ios": "8.0"
@@ -21,10 +21,10 @@
   "source_files": "FoodFactsSDK/Classes/**/*",
   "dependencies": {
     "Alamofire": [
-
+      "~> 3.5"
     ],
     "SwiftyJSON": [
-
+      "2.4.0"
     ]
   }
 }
