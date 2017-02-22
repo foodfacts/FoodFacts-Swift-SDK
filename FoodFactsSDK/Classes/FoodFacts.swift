@@ -17,15 +17,15 @@ public class FoodFacts {
     var baseURL : String = "https://api.foodfacts.com/ci/api/foodfacts/"
     
     public init() {
-        let userDefaults: UserDefaults = UserDefaults.standard
-        
-        if userDefaults.string(forKey: "FoodFactsSDK_username") == nil ||  userDefaults.string(forKey: "FoodFactsSDK_password") == nil{
+        let userDefaults: NSUserDefaults = NSUserDefaults.standardUserDefaults()
+      
+        if userDefaults.stringForKey( "FoodFactsSDK_username") == nil ||  userDefaults.stringForKey( "FoodFactsSDK_password") == nil{
             self.username = ""
             self.password = ""
         } else {
           //  print(userDefaults.string(forKey: "FoodFactsSDK_username")! + " has account")
-            self.username = userDefaults.string(forKey: "FoodFactsSDK_username")!
-            self.password = userDefaults.string(forKey: "FoodFactsSDK_password")!
+            self.username = userDefaults.stringForKey( "FoodFactsSDK_username")!
+            self.password = userDefaults.stringForKey("FoodFactsSDK_password")!
         }
         
     }
@@ -43,9 +43,9 @@ public class FoodFacts {
         
         self.username = username
         self.password = password
-        let userDefaults: UserDefaults = UserDefaults.standard
-        userDefaults.set(username, forKey: "FoodFactsSDK_username")
-        userDefaults.set(password, forKey: "FoodFactsSDK_password")
+        let userDefaults: NSUserDefaults = NSUserDefaults.standardUserDefaults()
+        userDefaults.setObject(username, forKey: "FoodFactsSDK_username")
+        userDefaults.setObject(password, forKey: "FoodFactsSDK_password")
         userDefaults.synchronize()
     }
     
@@ -56,7 +56,9 @@ public class FoodFacts {
    public func categoryList(callback:  (FFCategoryListResponse)->()){
    
         let url = baseURL+"food_categories/format/json"
-        Alamofire.request(url, method: .post, parameters: ["login": username, "password" : password]).responseJSON {response in
+    
+    
+         Alamofire.request(.POST, url, parameters: ["login": username, "password" : password]).responseJSON {response in
             if let j = response.result.value{
                 //Check if vaild
                 let json = JSON(j)
@@ -123,7 +125,7 @@ public class FoodFacts {
     public func subCategoryList(category_id: Int,callback:  (FFCategoryListResponse)->()){
         
         let url = baseURL+"food_sub_categories/format/json"
-        Alamofire.request(url, method: .post, parameters: ["login": username, "password" : password, "category": category_id]).responseJSON {response in
+          Alamofire.request(.POST, url, parameters: ["login": username, "password" : password, "category": category_id]).responseJSON {response in
           
             if let j = response.result.value{
                 //Check if vaild
@@ -184,7 +186,7 @@ public class FoodFacts {
     public func productsByCategory(category_id: Int, subcategory_id: Int, per_page: Int, page: Int, sort_by: String, callback:  (FFProductsResponse)->()){
         
         let url = baseURL+"food_products_per_category/format/json"
-        Alamofire.request(url, method: .post, parameters: ["login": username, "password" : password, "category": category_id, "sub_category": subcategory_id, "per_page": per_page, "page" : page, "sort_by" : sort_by]).responseJSON {response in
+         Alamofire.request(.POST, url, parameters: ["login": username, "password" : password, "category": category_id, "sub_category": subcategory_id, "per_page": per_page, "page" : page, "sort_by" : sort_by]).responseJSON {response in
             
             if let j = response.result.value{
                 //Check if vaild
@@ -245,7 +247,7 @@ public class FoodFacts {
     public func productsBySearchTerm(search_term: String, per_page: Int, page: Int, sort_by: String, callback:  (FFProductsResponse)->()){
         
         let url = baseURL+"food_products_per_search_term/format/json"
-        Alamofire.request(url, method: .post, parameters: ["login": username, "password" : password, "search_term": search_term, "per_page": per_page, "page" : page, "sort_by" : sort_by]).responseJSON {response in
+          Alamofire.request(.POST, url, parameters:["login": username, "password" : password, "search_term": search_term, "per_page": per_page, "page" : page, "sort_by" : sort_by]).responseJSON {response in
            
             if let j = response.result.value{
                 //Check if vaild
@@ -303,7 +305,7 @@ public class FoodFacts {
     public func productInformationByID(product_id: String, callback:  (FFProductResponse)->()){
         
         let url = baseURL+"food_product_detail_information/format/json"
-        Alamofire.request(url, method: .post, parameters: ["login": username, "password" : password,  "product_id" : product_id]).responseJSON {response in
+          Alamofire.request(.POST, url, parameters: ["login": username, "password" : password,  "product_id" : product_id]).responseJSON {response in
             if let j = response.result.value{
                 //Check if vaild
                 let json = JSON(j)
@@ -360,7 +362,7 @@ public class FoodFacts {
     public func productInformationByUPC(upc: String, callback:  (FFProductResponse)->()){
         
         let url = baseURL+"food_find_product_by_upc/format/json"
-        Alamofire.request(url, method: .post, parameters: ["login": username, "password" : password,  "upc" : upc]).responseJSON {response in
+          Alamofire.request(.POST, url, parameters:["login": username, "password" : password,  "upc" : upc]).responseJSON {response in
             if let j = response.result.value{
                 //Check if vaild
                 let json = JSON(j)
